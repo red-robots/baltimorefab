@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0.02em !important;
+  color: #000 !important;
+}
+body h1 {
+  font-size: 2.25em !important;
+}
+body h2 {
+  font-size: 1.75em !important;
+}
+body h3 {
+  font-size: 1.5em !important;
+}
+body h4 {
+  font-size: 1.25em !important;
+}
+body h5 {
+  font-size: 1.1em !important;
+}
+body h6 {
+  font-size: 1em !important;
+}
+
+.custom-color {
+  color: #444;
+}
+
+.custom-button-element a {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  color: #fff !important;
+  background: #2558B5 !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  padding: 15px 20px 15px !important;
+  border-radius: 5px !important;
+  text-align: center;
+  transition: all ease 0.3s;
+  border: none !important;
+}
+
+.wp-editor .button {
+  border: 1px solid #CCC;
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  background: #dfdfdf;
+  color: #000;
+  margin: 0 15px 0 0;
+}
+
+/*# sourceMappingURL=editor-style.css.map */

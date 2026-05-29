@@ -37,7 +37,7 @@ body {
 	line-height: 1.6;
 	letter-spacing: 0.02em;
   color: $color_text_main;
-  background: #FFF;
+  background: #EFEFEF;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -124,3 +124,116 @@ div.buttons {
   }
 }
 
+.container {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.flexwrap {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+.site-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	background-color: transparent;
+	.flexwrap {
+		align-items: center;
+		justify-content: space-between;
+	}
+	.site-logo {
+		display: inline-block;
+		width: 160px;
+		a, img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+	.main-navigation {
+		ul.menu {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			gap: 2.75rem;
+			list-style: none;
+			margin: 0 0;
+			a {
+				display: block;
+				text-decoration: none;
+				transition: all ease .3s;
+			}
+			> li > a {
+				font-size: 13px;
+				font-weight: 700;
+				line-height: 1.2;
+				text-transform: uppercase;
+				color: #000;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.menu-toggle {
+	appearance: none;
+	display: block;
+	position: relative;
+	width: 40px;
+	height: 38px;
+	z-index: 503;
+	box-shadow: none;
+	border: none;
+	background: transparent;
+	padding: 0 0;
+	margin: 3px 0 0;
+	span.bar {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		width: 15px;
+	}
+	span.bar, span.bar:before, span.bar:after {
+		display: inline-block;
+		height: 3px;
+		transition: all ease-in-out .3s;
+		background: #000;
+		border-radius: 100px;
+	}
+	span.bar:before, span.bar:after {
+		width: 25px;
+		transition: all ease .3s;
+		content:"";
+		position: absolute;
+		left: 0;
+	}
+	span.bar:before {
+		top: -8px;
+	}
+	span.bar:after {
+		top: 8px;
+	}
+	&:hover, &:focus {
+		span.bar:before, 
+		span.bar:after {
+			transform: scaleX(0.5);
+		}
+	}
+}
+
+
+.mobile-primary-navigation {
+	display: none;
+}
+
+.site-content {
+	min-height: 30em;
+}

@@ -5,12 +5,12 @@
     //console.log(url);
     var parts = url.split('assets');
     var themeURL = parts[0]; // Add Button to Visual Editor Toolbar
-
-    editor.addButton('custom_class', {
-      title: 'Checklist',
-      cmd: 'custom_class',
-      image: themeURL + 'assets/img/checklist.png'
-    }); // Add Command when Button Clicked
+    //   editor.addButton('custom_class', {
+    //       title: 'Checklist',
+    //       cmd: 'custom_class',
+    //       image: themeURL + 'assets/img/checklist.png',
+    //   });
+    // Add Command when Button Clicked
 
     editor.addCommand('custom_class', function () {
       //alert('Button clicked!');
@@ -46,7 +46,7 @@
     editor.addButton('edbutton1', {
       title: 'Button Dark Orange',
       cmd: 'edbutton1',
-      image: themeURL + 'assets/img/button-orange.png'
+      image: themeURL + 'assets/img/tinymce-button.png'
     }); // Add Command when Button Clicked
 
     editor.addCommand('edbutton1', function () {
@@ -57,7 +57,7 @@
         return;
       }
 
-      var open_column = '<span class="custom-button-element white"><a data-mce-href="#" href="#"  data-mce-selected="inline-boundary" class="button-element button">';
+      var open_column = '<span class="custom-button-element blue"><a data-mce-href="#" href="#"  data-mce-selected="inline-boundary" class="button-element button">';
       var close_column = '</a></span>';
       var return_text = '';
       return_text = open_column + selected_text + close_column;
