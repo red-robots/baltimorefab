@@ -99,6 +99,34 @@ jQuery(document).ready(function($) {
 		},800);
 	});
 
+	/**
+	 *  Custom jQuery Scripts
+	 *  Developed by: Mindy Amante
+	 *  Date Modified: 06.02.2026
+	 */
+	// Preloader - WOW js
+	Pace.on("done", function () {
+		$("#preloader").addClass("load_coplate");
+		$(".product_name").addClass("load_coplate");
+	});
+	// Preloader - END
+
+	// Fixed Navbar
+	var nav_offset_top = $("header").height() + 100;
+	function navbarFixed() {
+		if ($("header").length) {
+			$(window).scroll(function () {
+				var scroll = $(window).scrollTop();
+				if (scroll >= nav_offset_top) {
+					$("header").addClass("navbar_fixed");
+				} else {
+					$("header").removeClass("navbar_fixed");
+				}
+			});
+		}
+	}
+	navbarFixed();
+	// Fixed Navbar - END
 
 });
 

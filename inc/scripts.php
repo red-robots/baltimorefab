@@ -43,6 +43,18 @@ function bellaworks_scripts() {
   );
 
   wp_enqueue_script(
+    'bellaworks-pace',
+    get_template_directory_uri() . '/assets/js/vendor/pace.min.js',
+    array(), '20260602', true
+  );
+
+  wp_enqueue_script(
+    'bellaworks-wow',
+    get_template_directory_uri() . '/assets/js/vendor/wow.min.js',
+    array(), '20260602', true
+  );
+
+  wp_enqueue_script(
     'bellaworks-custom',
     get_template_directory_uri() . '/assets/js/custom/custom.js',
     array(), '20260218', true

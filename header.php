@@ -30,13 +30,19 @@ $featImg = wp_get_attachment_image_src($thumbId,'full'); ?>
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-  <div id="page" class="site">
+  <div id="page" class="site body_wrapper">
+    <div id="preloader">
+      <div class="product_name">LOADING</div>
+    </div>
     <?php
       $tagline = get_field('tagline', 'option');
       $restaurant_logos = get_field('restaurant_logos', 'option');
     ?>
     <a class="skip-link sr" href="#content"><?php esc_html_e( 'Skip to content', 'bellaworks' ); ?></a>
     <header id="masthead" class="site-header">
+      <div class="header_top">
+        <div class="container"></div>
+      </div>
       <div class="container">
         <div class="flexwrap">
           <span class="site-logo">
@@ -70,5 +76,5 @@ $featImg = wp_get_attachment_image_src($thumbId,'full'); ?>
 		<?php if( is_front_page() || is_home() ) { ?>
 		<?php get_template_part('parts/partners-top'); ?>
 		<?php } ?>
-		 <?php get_template_part('parts/hero'); ?>
+		<?php get_template_part('parts/hero'); ?>
     <div id="content" class="site-content">

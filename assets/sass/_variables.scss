@@ -5,6 +5,8 @@ $color_text_main: #7e8288;
 $primary: #1E2228;
 $secondary: #2558B5;
 
+$color_white: #FFF;
+
 $font_primary: "Montserrat", sans-serif;
 $font_secondary: "Google Sans", sans-serif;
 
@@ -242,5 +244,3 @@ $wrapper: 1300px;
 @function shade($color, $percentage) {
   @return mix(black, $color, $percentage);
 }
-
-
