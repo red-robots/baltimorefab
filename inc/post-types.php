@@ -8,23 +8,32 @@
 add_action('init', 'js_custom_init', 1);
 function js_custom_init() {
     $post_types = array(
-      // array(
-      //   'post_type' => 'stories',
-      //   'menu_name' => 'Stories',
-      //   'plural'    => 'Stories',
-      //   'single'    => 'Story',
-      //   'menu_icon' => 'dashicons-megaphone',
-      //   'supports'  => array('title','editor','thumbnail'),
-      //   'menu_position'=> 5
-      // ),
       array(
-        'post_type' => 'portfolio',
-        'menu_name' => 'Portfolio',
-        'plural'    => 'Portfolio',
-        'single'    => 'Portfolio',
+        'post_type' => 'projects',
+        'menu_name' => 'Projects',
+        'plural'    => 'Projects',
+        'single'    => 'Project',
         'menu_icon' => 'dashicons-category',
+        'supports'  => array('title','editor'),
+        'menu_position'=> 5
+      ),
+      array(
+        'post_type' => 'careers',
+        'menu_name' => 'Careers',
+        'plural'    => 'Careers',
+        'single'    => 'Career',
+        'menu_icon' => 'dashicons-groups',
         'menu_position'=> 5,
-        'supports'  => array('title','editor','thumbnail'),
+        'supports'  => array('title','editor'),
+      ),
+      array(
+        'post_type' => 'clients',
+        'menu_name' => 'Clients',
+        'plural'    => 'Clients',
+        'single'    => 'Client',
+        'menu_icon' => 'dashicons-id',
+        'menu_position'=> 5,
+        'supports'  => array('title','editor', 'thumbnail'),
       ),
       // array(
       //   'post_type' => 'upcoming-events',
@@ -102,13 +111,13 @@ add_action( 'init', 'build_taxonomies', 0 );
 function build_taxonomies() {
 
   $post_types = array(
-    array(
-      'post_type' => array('portfolio'),
-      'menu_name' => 'Portfolio Category',
-      'plural'    => 'Portfolio Categories',
-      'single'    => 'Portfolio Category',
-      'taxonomy'  => 'Portfolio-categories'
-    ),
+    // array(
+    //   'post_type' => array('portfolio'),
+    //   'menu_name' => 'Portfolio Category',
+    //   'plural'    => 'Portfolio Categories',
+    //   'single'    => 'Portfolio Category',
+    //   'taxonomy'  => 'Portfolio-categories'
+    // ),
   );
 
 

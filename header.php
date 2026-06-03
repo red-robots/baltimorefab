@@ -39,7 +39,7 @@ $featImg = wp_get_attachment_image_src($thumbId,'full'); ?>
       $restaurant_logos = get_field('restaurant_logos', 'option');
     ?>
     <a class="skip-link sr" href="#content"><?php esc_html_e( 'Skip to content', 'bellaworks' ); ?></a>
-    <header id="masthead" class="site-header">
+    <header id="masthead" class="site-header header_tranparent">
       <div class="header_top">
         <div class="container"></div>
       </div>
