@@ -73,8 +73,5 @@ $featImg = wp_get_attachment_image_src($thumbId,'full'); ?>
       </div>
     </header>
 
-		<?php if( is_front_page() || is_home() ) { ?>
-		<?php get_template_part('parts/partners-top'); ?>
-		<?php } ?>
 		<?php get_template_part('parts/hero'); ?>
     <div id="content" class="site-content">

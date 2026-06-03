@@ -198,4 +198,17 @@ jQuery(document).ready(function ($) {
   }
 
   navbarFixed(); // Fixed Navbar - END
+  // Back to Top Button
+
+  function backTop() {
+    var back_top_btn = $(".go_top");
+    back_top_btn.on("click", function (e) {
+      e.preventDefault();
+      $("html, body").animate({
+        scrollTop: 0
+      }, "300");
+    });
+  }
+
+  backTop(); // Back to Top Button - END
 });

@@ -26,15 +26,6 @@ function js_custom_init() {
         'menu_position'=> 5,
         'supports'  => array('title','editor'),
       ),
-      array(
-        'post_type' => 'clients',
-        'menu_name' => 'Clients',
-        'plural'    => 'Clients',
-        'single'    => 'Client',
-        'menu_icon' => 'dashicons-id',
-        'menu_position'=> 5,
-        'supports'  => array('title','editor', 'thumbnail'),
-      ),
       // array(
       //   'post_type' => 'upcoming-events',
       //   'menu_name' => 'Upcoming Events',
