@@ -23,7 +23,7 @@ function js_custom_init() {
         'plural'    => 'Projects',
         'single'    => 'Project',
         'menu_icon' => 'dashicons-category',
-        'supports'  => array('title','editor'),
+        'supports'  => array('title','editor','thumbnail'),
         'menu_position'=> 4
       ),
       array(

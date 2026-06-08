@@ -26,7 +26,7 @@
                 <div class="f_widget f_link_widget">
                     <h3 class="f_title">Who we are</h3>
                     <?php if( has_nav_menu('footer') ) { 
-                      wp_nav_menu( array( 'theme_location' => 'footer', 'menu_id' => 'footer-menu','link_before'=>'<span>','link_after'=>'</span>','items_wrap'=>'<ul id="%1$s" class="%2$s list-unstyled f_link">%3$s</ul>') ); ?>
+                      wp_nav_menu( array( 'theme_location' => 'footer', 'menu_id' => 'footer-menu','link_before'=>'<span>','link_after'=>'</span>','items_wrap'=>'<ul id="%1$s" class="list-unstyled f_link">%3$s</ul>', 'container' => '') ); ?>
                     <?php } ?>
                 </div>
             </div>

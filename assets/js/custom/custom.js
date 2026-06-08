@@ -229,8 +229,65 @@ jQuery(document).ready(function($) {
 		  });
 		}
 	  }
-	  mainSlider();
-	  // Hero slider Home
+	mainSlider();
+	// Hero slider Home - END
+
+	// Projects
+	function portfolioMasonry() {
+		var portfolio = $("#work-portfolio, .projects_inner");
+		if (portfolio.length) {
+			portfolio.imagesLoaded(function () {
+			// images have loaded
+			// Activate isotope in container
+			portfolio.isotope({
+				// itemSelector: ".portfolio_item",
+				layoutMode: "fitRows",
+				filter: "*",
+				animationOptions: {
+				duration: 1000,
+				},
+				transitionDuration: "0.5s",
+			});
+
+			// Add isotope click function
+			$("#portfolio_filter div").on("click", function () {
+				$("#portfolio_filter div").removeClass("active");
+				$(this).addClass("active");
+
+				var selector = $(this).attr("data-filter");
+				portfolio.isotope({
+				filter: selector,
+				animationOptions: {
+					animationDuration: 750,
+					easing: "linear",
+					queue: false,
+				},
+				});
+				return false;
+			});
+			});
+		}
+	}
+	portfolioMasonry();
+
+	function portfolioMasonry2() {
+		var gallery = $("#gallery");
+		if (gallery.length) {
+			gallery.imagesLoaded(function () {
+			// images have loaded
+			// Activate isotope in container
+			gallery.isotope({
+				// itemSelector: ".portfolio_item",
+				layoutMode: "masonry",
+				masonry: {
+				columnWidth: 10,
+				},
+			});
+			});
+		}
+	}
+	portfolioMasonry2();
+	  // Projects - END
 
 });
 

@@ -49,6 +49,12 @@ function bellaworks_scripts() {
   );
 
   wp_enqueue_script(
+    'bellaworks-isotope',
+    get_template_directory_uri() . '/assets/js/vendor/isotope.pkgd.min.js',
+    array(), '20260608', true
+  );
+
+  wp_enqueue_script(
     'bellaworks-pace',
     get_template_directory_uri() . '/assets/js/vendor/pace.min.js',
     array(), '20260602', true
