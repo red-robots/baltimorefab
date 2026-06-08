@@ -9,13 +9,22 @@ add_action('init', 'js_custom_init', 1);
 function js_custom_init() {
     $post_types = array(
       array(
+        'post_type' => 'services',
+        'menu_name' => 'Services',
+        'plural'    => 'Services',
+        'single'    => 'Service',
+        'menu_icon' => 'dashicons-hammer',
+        'menu_position'=> 4,
+        'supports'  => array('title','editor'),
+      ),
+      array(
         'post_type' => 'projects',
         'menu_name' => 'Projects',
         'plural'    => 'Projects',
         'single'    => 'Project',
         'menu_icon' => 'dashicons-category',
         'supports'  => array('title','editor'),
-        'menu_position'=> 5
+        'menu_position'=> 4
       ),
       array(
         'post_type' => 'careers',

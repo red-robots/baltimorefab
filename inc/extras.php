@@ -358,3 +358,20 @@ function get_flexible_parts() {
 	}
 	return $partsFiles;
 }
+
+// Add class to main menu in nav
+function custom_nav_menu_css_class( $items ) {
+    foreach ( $items as $item ) {
+        $item->classes[] = 'dropdown';
+    }
+    return $items;
+}
+add_filter('wp_nav_menu_objects', 'custom_nav_menu_css_class', 10, 2 );
+
+// Add class to sub menu in nav
+function my_custom_submenu_class($classes, $args, $depth) {
+    // Add your custom class name to the array
+    $classes[] = 'dropdown-menu';
+    return $classes;
+}
+add_filter('nav_menu_submenu_css_class', 'my_custom_submenu_class', 10, 3);
