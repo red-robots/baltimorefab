@@ -5,8 +5,6 @@
     $services_url_link = (isset($services_url['url']) && $services_url['url']) ? $services_url['url'] : '';
     $services_url_target = (isset($services_url['target']) && $services_url['target']) ? $services_url['target'] : '_self';
 
-    print_r($services_url);
-
     if( $services ){
 ?>
     <section class="cons_service_area_six">
