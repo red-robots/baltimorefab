@@ -15,7 +15,7 @@ function js_custom_init() {
         'single'    => 'Service',
         'menu_icon' => 'dashicons-hammer',
         'menu_position'=> 4,
-        'supports'  => array('title','editor'),
+        'supports'  => array('title','editor','thumbnail'),
       ),
       array(
         'post_type' => 'projects',

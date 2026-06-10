@@ -37,18 +37,36 @@ $featImg = wp_get_attachment_image_src($thumbId,'full'); ?>
     <?php
       $logo_white = get_field('white_logo', 'option');
       $logo = get_field('colored_logo', 'option');
+
+      $header_class = "";
+      $nav_class = "";
+
+      if(is_front_page() || is_home()){
+        $header_class .= 'header_tranparent';
+        $nav_class .= 'white_menu';
+      }else{
+        $header_class .= "header_top_gap_four";
+      }
+    
     ?>
     <a class="skip-link sr" href="#content"><?php esc_html_e( 'Skip to content', 'bellaworks' ); ?></a>
-    <header id="masthead" class="header_tranparent">
-      <div class="header_top">
-        <div class="container"></div>
-      </div>
-      <nav id="header" class="navbar navbar-expand-lg white_menu">
+    <header id="masthead" class="<?php echo $header_class; ?>">
+      <?php if(is_front_page() || is_home()){ ?>
+        <div class="header_top">
+          <div class="container"></div>
+        </div>
+      <?php } ?>
+      <nav id="header" class="navbar navbar-expand-lg <?php echo $nav_class; ?>">
         <div class="container">
           <?php if($logo_white){ ?>
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand sticky_logo">
-              <img src="<?php echo $logo_white['url']; ?>" alt="<?php bloginfo( 'name' ); ?>">
-              <img src="<?php echo $logo['url']; ?>" alt="<?php bloginfo( 'name' ); ?>">
+              <?php if(is_front_page() || is_home()){ ?>
+                <img src="<?php echo $logo_white['url']; ?>" alt="<?php bloginfo( 'name' ); ?>">
+                <img src="<?php echo $logo['url']; ?>" alt="<?php bloginfo( 'name' ); ?>">
+              <?php }else{ ?>
+                <img src="<?php echo $logo['url']; ?>" alt="<?php bloginfo( 'name' ); ?>">
+                <img src="<?php echo $logo['url']; ?>" alt="<?php bloginfo( 'name' ); ?>">
+              <?php } ?>
             </a>
           <?php }else{ ?>
             <?php the_custom_logo(); ?>
@@ -59,51 +77,49 @@ $featImg = wp_get_attachment_image_src($thumbId,'full'); ?>
           </nav>
 
           <div class="menu-toggle list-unstyled navbar-nav navright menu_btn" aria-expanded="false" aria-controls="#primary-navigation">
-            <li class=""></li>
             <span class="sr">Menu Toggle</span>
             <span class="bar"><span></span></span>
           </div>
         </div>
       </nav>
-    </header>
-    <!-- Mobile Menu -->
-    <?php
-        $menu_items = wp_get_nav_menu_items('Mobile Menu');
-
-        if ( !empty($menu_items) ) {
-    ?>
-    <div class="mobile-primary-navigation mobile_menu d-flex flex-wrap align-items-center">
-      <div class="close_btn">X</div>
+      <!-- Mobile Menu -->
       <?php
-        echo '<ul class="list-unstyled mb_menu wd_scroll">';
-          foreach ( $menu_items as $menu_item ) {
-              $parent_ids = wp_list_pluck( $menu_items, 'menu_item_parent' );
-              $has_children = in_array( $menu_item->ID, $parent_ids );
-              $parent_class = $has_children ? 'menu-item-has-children' : '';
+          $menu_items = wp_get_nav_menu_items('Mobile Menu');
 
-              // Parent Link
-              if ($menu_item->menu_item_parent == 0) {
-                echo '<li class="'. $parent_class .'"><a href="' . esc_url($menu_item->url) . '">' . ($menu_item->title) . '</a>';
-
-                // Loop through the same menu to find matching children
-                if ($has_children ) {
-                  echo '<ul class="list-unstyled">';
-                  foreach ($menu_items as $sub_item) {
-                    if ($sub_item->menu_item_parent == $menu_item->ID) {
-                        echo '<li><a href="' . esc_url($sub_item->url) . '">' . esc_html($sub_item->title) . '</a></li>';
-                    }
-                  }
-                  echo '</ul>'; // End of sub-menu
-                }
-              echo '</li>';
-              }
-          }
-          echo '</ul>';
-        } 
+          if ( !empty($menu_items) ) {
       ?>
-    </div>
-    <div class="body_capture"></div>
-    <!-- Mobile Menu - END -->
+      <div class="mobile-primary-navigation mobile_menu d-flex flex-wrap align-items-center">
+        <div class="close_btn">X</div>
+        <?php
+          echo '<ul class="list-unstyled mb_menu wd_scroll">';
+            foreach ( $menu_items as $menu_item ) {
+                $parent_ids = wp_list_pluck( $menu_items, 'menu_item_parent' );
+                $has_children = in_array( $menu_item->ID, $parent_ids );
+                $parent_class = $has_children ? 'menu-item-has-children' : '';
+
+                // Parent Link
+                if ($menu_item->menu_item_parent == 0) {
+                  echo '<li class="'. $parent_class .'"><a href="' . esc_url($menu_item->url) . '">' . ($menu_item->title) . '</a>';
+
+                  // Loop through the same menu to find matching children
+                  if ($has_children ) {
+                    echo '<ul class="list-unstyled">';
+                    foreach ($menu_items as $sub_item) {
+                      if ($sub_item->menu_item_parent == $menu_item->ID) {
+                          echo '<li><a href="' . esc_url($sub_item->url) . '">' . esc_html($sub_item->title) . '</a></li>';
+                      }
+                    }
+                    echo '</ul>'; // End of sub-menu
+                  }
+                echo '</li>';
+                }
+            }
+            echo '</ul>';
+          } 
+        ?>
+      </div>
+      <div class="body_capture"></div>
+      <!-- Mobile Menu - END -->
+    </header>
 
 		<?php get_template_part('parts/hero'); ?>
-    <div id="content" class="site-content">

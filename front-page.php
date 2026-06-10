@@ -16,6 +16,7 @@ $repeatable_blocks = get_field('flexible_content');
         <?php include( locate_template('repeatable-blocks.php') ); ?>
       <?php } ?>
 
+      <?php get_template_part('parts/home-projects'); ?>
       <?php get_template_part('parts/home-services'); ?>
 
     <?php endwhile; ?>

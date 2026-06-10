@@ -1,5 +1,3 @@
-	</div><!-- #content -->
-
   <?php if( is_front_page() || is_home() ) { ?>
 		<?php get_template_part('parts/clients'); ?>
 	<?php } ?>

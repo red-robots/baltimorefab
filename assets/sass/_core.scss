@@ -49,7 +49,6 @@ body {
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 32px;
-	letter-spacing: 0.02em;
 	color: $color_text_main;
 
 	.body_wrapper {
@@ -162,6 +161,14 @@ div.buttons {
 	position: relative;
 }
 
+.pt_100 {
+	padding-top: 100px;
+}
+
+.pt_200, .pt_300, .pt_400 {
+	padding-top: 150px;
+}
+
 // Header
 // .site-header {
 // 	position: absolute;
@@ -246,6 +253,12 @@ div.buttons {
 // Header Transparent - END
 
 // Header Top
+.navbar {
+	box-shadow: 0px 5px 40px 0px rgba(30, 34, 40, 0.05);
+	background: $color_white;
+	padding: 0px;
+}
+
 header {
 	position: absolute;
 	top: 5px;
@@ -311,6 +324,24 @@ header + section {
 
 .header_top_two {
 	padding: 20px 0px 70px;
+}
+
+.header_top_gap_four {
+	top: 0;
+}
+
+.header_top_gap_four + div,
+.header_top_gap_four + section {
+	margin-top: 120px;
+}
+
+.header_top_gap_four .menu > .nav-item {
+	padding-top: 42px;
+	padding-bottom: 42px;
+}
+
+.header_top_gap_four .navright li {
+	padding: 47px 0px;
 }
 
 .menu > .menu-item {
@@ -461,9 +492,11 @@ header + section {
 	position: relative;
   }
   
-  .navright li a {
+  .navright li span.bar,
+  .navright li span.bar:before,
+  .navright li span.bar:after {
 	font-size: 24px;
-	color: #a8aaad;
+	background: $color_grey;
 	transition: color 0.2s linear;
   }
   
@@ -772,7 +805,7 @@ header + section {
   }
   
   .white_menu .navright li a {
-	color: #fff;
+	color: $color_white;
   }
   
   .white_menu .navright li:hover a {
@@ -866,7 +899,7 @@ header + section {
   .navbar_fixed .menu-toggle span.bar,
   .navbar_fixed .menu-toggle span.bar:before,
   .navbar_fixed .menu-toggle span.bar:after {
-	background: $primary;
+	background: $color_grey;
   }
   
   .navbar_fixed .white_menu .menu > .menu-item:hover > a, .navbar_fixed .white_menu .menu > .menu-item.active > a {
@@ -1039,7 +1072,7 @@ header + section {
 		display: inline-block;
 		height: 3px;
 		transition: all ease-in-out .3s;
-		background: $color_white;
+		background: $color_grey;
 		border-radius: 100px;
 	}
 	span.bar:before, span.bar:after {
@@ -1060,7 +1093,37 @@ header + section {
 		span.bar:before,
 		span.bar:after {
 			//transform: scaleX(0.5);
-			background: $secondary;
+			background: $primary;
+		}
+	}
+}
+.white_menu {
+	.menu-toggle {
+		span.bar, span.bar:before, span.bar:after {
+			background: $color_white;
+		}
+		&:hover, &:focus {
+			span.bar,
+			span.bar:before,
+			span.bar:after {
+				//transform: scaleX(0.5);
+				background: $secondary;
+			}
+		}
+	}
+}
+.navbar_fixed .white_menu {
+	.menu-toggle {
+		span.bar, span.bar:before, span.bar:after {
+			background: $primary;
+		}
+		&:hover, &:focus {
+			span.bar,
+			span.bar:before,
+			span.bar:after {
+				//transform: scaleX(0.5);
+				background: $secondary;
+			}
 		}
 	}
 }
@@ -1789,6 +1852,50 @@ max-width: 630px;
 	background: #2558b5;
 	color: #fff;
   }
+
+  .projects_area {
+	padding-bottom: 35px;
+  }
+  
+  .projects_area .portfolio_filter {
+	margin-bottom: 95px;
+  }
+  
+  .projects_area .projects_inner {
+	margin-bottom: -30px;
+  }
+  
+  .project_item {
+	margin-bottom: 30px;
+  }
+  
+  .project_item:before {
+	background: rgba(242, 117, 7, 0.95);
+	opacity: 0;
+	transition: all 300ms linear 0s;
+  }
+  
+  .project_item h4 {
+	margin-bottom: 45px;
+  }
+  
+  .project_item .theme_btn_two {
+	opacity: 0;
+	margin-top: 8px;
+	padding: 8px 37px;
+  }
+  
+  .project_item:hover .hover-content {
+	bottom: 65px;
+  }
+  
+  .project_item:hover:before {
+	opacity: 1;
+  }
+  
+  .project_item:hover .theme_btn_two {
+	opacity: 1;
+  }
   
   // Two
   .cons_projects_area_two {
@@ -1880,6 +1987,86 @@ max-width: 630px;
   }
   // Three - END
 // Home - Projects - END
+
+// Home - Services
+.cons_service_quality_area {
+	padding-bottom: 50px;
+  }
+  
+  .cons_service_quality_item {
+	border-radius: 2px;
+	background-color: white;
+	box-shadow: 0px 45px 150px 0px rgba(30, 34, 40, 0.1);
+	padding: 60px 55px 50px;
+	margin-top: -148px;
+  }
+  
+  .cons_service_quality_item i {
+	font-size: 80px;
+	color: #2558b5;
+	margin-bottom: 30px;
+	display: block;
+  }
+  
+  .cons_service_quality_item h4 {
+	color: #1e2228;
+	font-size: 24px;
+	line-height: 38px;
+	font-weight: 700;
+	margin-bottom: 20px;
+	transition: color 0.2s linear;
+  }
+  
+  .cons_service_quality_item h4:hover {
+	color: #2558b5;
+  }
+  
+  .cons_service_quality_item p {
+	font-size: 18px;
+	line-height: 34px;
+	color: #7e8288;
+	margin-bottom: 0;
+  }
+
+  // Six
+.cons_service_area_six {
+	padding: 100px 0px;
+  }
+  
+  .cons_service_area_six .col-md-6 {
+	margin-bottom: 30px;
+  }
+  
+  .cons_service_area_six .cons_service_quality_item {
+	margin-top: 0;
+	padding: 68px 53px 65px;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.2s linear;
+	cursor: pointer;
+  }
+  
+  .cons_service_area_six .cons_service_quality_item .shap {
+	position: absolute;
+	right: -173px;
+	top: -145px;
+	font-size: 280px;
+	color: #f7f5f9;
+	margin-bottom: 0;
+  }
+  
+  .cons_service_area_six .cons_service_quality_item:hover {
+	background: #fff;
+	box-shadow: 0px 45px 150px 0px rgba(30, 34, 40, 0.2);
+  }
+  
+  .cons_service_area_six .full_btn {
+	width: 100%;
+	height: 100%;
+	font-size: 36px;
+	font-weight: 700;
+  }
+// Home - Services - END
 
 // Clients
 .cons_clients_logo_area {
@@ -2184,6 +2371,240 @@ max-width: 630px;
 // }
 
 // Footer - END
+
+// Services Page
+.about_main_area {
+    padding-top: 90px;
+}
+
+.about_main_area .about_inner {
+  text-align: center;
+  max-width: 770px;
+  margin: auto;
+
+  h2 {
+	font-size: 36px;
+    line-height: 48px;
+    font-weight: 700;
+	margin-bottom: 40px;
+  }
+
+  h6 {
+	text-transform: uppercase;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 2.1px;
+    color: #2558b5;
+    font-weight: 600;
+    margin-bottom: 22px;
+  }
+}
+
+.about_main_area .about_inner .title_head {
+  margin-bottom: 40px;
+}
+
+.about_main_area .about_inner p {
+  font: 400 18px/34px "Montserrat", sans-serif;
+  margin-bottom: 30px;
+}
+
+.about_main_area .about_img {
+  border-radius: 2px;
+  background-color: #a8aaad;
+  box-shadow: 0px 45px 150px 0px rgba(30, 34, 40, 0.2);
+  margin-top: 80px;
+  position: relative;
+}
+
+.about_main_area .about_img:before {
+  content: "";
+  background: url(../img/about/about-texture.png) no-repeat;
+  height: 270px;
+  width: 300px;
+  position: absolute;
+  left: -130px;
+  top: -130px;
+  z-index: -1;
+}
+// Services Page - END
+
+// Services Single Page
+.product_details_area {
+	&.image-left .product_details_inner {
+		flex-direction: row-reverse;
+	}
+}
+
+.p_details_img {
+	margin-right: -30px;
+  }
+  
+  .p_details_text {
+	  /* [disabled]margin-left: 100px; */
+	  margin-top: 0px;
+  }
+  
+  .p_details_text h3 {
+	font: 700 36px "Montserrat", sans-serif;
+	margin-bottom: 35px;
+	margin-top: 10px;
+  }
+  
+  .p_details_text h5 {
+	font: 400 24px "Montserrat", sans-serif;
+	color: #1e2228;
+	margin-bottom: 35px;
+  }
+  
+  .p_details_text p {
+	margin-bottom: 50px;
+  }
+  
+  .p_details_text .product_count {
+	position: relative;
+	display: inline-block;
+  }
+  
+  .p_details_text .product_count input {
+	width: 170px;
+	height: 65px;
+	border: 2px solid #f4f4f4;
+	outline: none;
+	box-shadow: none;
+	text-align: center;
+	font: 400 15px/65px "Montserrat", sans-serif;
+	color: #7e8288;
+	padding: 0px 60px;
+  }
+  
+  .p_details_text .product_count input.placeholder {
+	font: 400 15px/65px "Montserrat", sans-serif;
+	color: #7e8288;
+  }
+  
+  .p_details_text .product_count input:-moz-placeholder {
+	font: 400 15px/65px "Montserrat", sans-serif;
+	color: #7e8288;
+  }
+  
+  .p_details_text .product_count input::-moz-placeholder {
+	font: 400 15px/65px "Montserrat", sans-serif;
+	color: #7e8288;
+  }
+  
+  .p_details_text .product_count input::-webkit-input-placeholder {
+	font: 400 15px/65px "Montserrat", sans-serif;
+	color: #7e8288;
+  }
+  
+  .p_details_text .product_count button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	border: none;
+	padding: 0px;
+	background: transparent;
+  }
+  
+  .p_details_text .product_count button i {
+	font-style: normal;
+	font: 400 15px "Montserrat", sans-serif;
+	color: #7e8288;
+	cursor: pointer;
+  }
+  
+  .p_details_text .product_count .reduced {
+	left: 30px;
+  }
+  
+  .p_details_text .product_count .increase {
+	right: 30px;
+  }
+  
+  .p_details_text .theme_btn_two {
+	background: #2558b5;
+	color: #fff;
+	height: 65px;
+	width: 270px;
+	font-size: 18px;
+  }
+  
+  .p_details_text .theme_btn_two:after {
+	background: #222;
+  }
+  
+  .p_details_text .team_list {
+	margin-top: 50px;
+  }
+  
+  .p_details_text .share_icon {
+	margin-top: 65px;
+  }
+  
+  .p_details_tab {
+	margin-top: 85px;
+	margin-bottom: 180px;
+  }
+  
+  .p_details_tab .nav-tabs li {
+	margin-bottom: 0px;
+	margin-right: 10px;
+  }
+  
+  .p_details_tab .nav-tabs li:last-child {
+	margin-right: 0px;
+  }
+  
+  .p_details_tab .nav-tabs li a {
+	border: none;
+	font: 700 18px "Montserrat", sans-serif;
+	color: #7e8288;
+	padding: 16px 30px;
+	position: relative;
+  }
+  
+  .p_details_tab .nav-tabs li a:before {
+	content: "";
+	width: 0px;
+	height: 1px;
+	background: #2558b5;
+	position: absolute;
+	bottom: -1px;
+	left: 0px;
+	transition: all 300ms linear 0s;
+  }
+  
+  .p_details_tab .nav-tabs li a:hover, .p_details_tab .nav-tabs li a.active {
+	color: #1e2228 !important;
+  }
+  
+  .p_details_tab .nav-tabs li a:hover:before, .p_details_tab .nav-tabs li a.active:before {
+	width: 100%;
+  }
+  
+  .p_details_tab .tab-pane {
+	margin-top: 90px;
+  }
+  
+  .p_details_tab .tab-pane h4 {
+	color: #1e2228;
+	font: 700 24px "Montserrat", sans-serif;
+	margin-bottom: 40px;
+  }
+  
+  .p_details_tab .tab-pane p {
+	margin-bottom: 0px;
+  }
+  
+  .interested_product {
+	margin-bottom: 50px;
+  }
+  
+  .interested_product .product_inner {
+	margin-bottom: -100px;
+  }
+// Services Single Page - END
 
 // Responsive
 @media (max-width: 1700px) {
