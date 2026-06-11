@@ -11,6 +11,13 @@ global $post;
 $postType = get_post_type();
 $repeatable_blocks = get_field('flexible_content');
 
+$page_id = 114; // Shops page ID
+$page_data = get_page(get_the_ID());
+
+if($page_data->post_name == "shops") {
+  $postType = 'GALLERY';
+}
+
 get_header(); ?>
 
 <section class="about_main_area">
@@ -20,11 +27,11 @@ get_header(); ?>
     
       <div class="container">
         <div class="about_inner">
-          <h6 class="title_top"><?php echo $postType; ?></h6>
-          <h2 class="title_head"><?php the_title(); ?></h2>
-          <? if( get_the_cotnent() ){
-            the_content();
-          } ?>
+            <h6 class="title_top"><?php echo $postType; ?></h6>
+            <h2 class="title_head"><?php the_title(); ?></h2>
+            <?php if( get_the_content() ){
+              the_content();
+            } ?>
           <br/>
         </div>
       </div>

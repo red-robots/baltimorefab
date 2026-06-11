@@ -7,8 +7,13 @@
   if($image_position) {
     $image_class ='image-' . $image_position;
   }
+  if( $i == 1 ){
+    $image_class .=' pt_100';
+  }else {
+    $image_class .=' pt_200';
+  }
   if($content || $image) { ?>
-  <section class="two_column_image_and_text two_column_image_and_text--<?php echo $i ?> <?php echo $image_class; ?> product_details_area pt_<?php echo $i ?>00">
+  <section class="two_column_image_and_text two_column_image_and_text--<?php echo $i ?> <?php echo $image_class; ?> product_details_area">
     <div class="container">
       <div class="row product_details_inner">
         <?php if ( $content ) { ?>
