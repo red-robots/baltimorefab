@@ -1,4 +1,15 @@
 @font-face {
+    font-family: "icomoon";
+    src: url("assets/fonts/icomoon/icomoon.eot");
+    src: url("assets/fonts/icomoon/icomoon.eot") format("embedded-opentype"),
+        url("assets/fonts/icomoon/icomoon.ttf") format("truetype"),
+        url("assets/fonts/icomoon/icomoon.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
     font-family: 'Gotham';
     src: url('assets/fonts/gotham/Gotham-BlackItalic.woff2') format('woff2'),
         url('assets/fonts/gotham/Gotham-BlackItalic.woff') format('woff');
@@ -141,4 +152,3 @@
     font-style: italic;
     font-display: swap;
 }
-

@@ -2389,6 +2389,10 @@ max-width: 630px;
 // Services Page
 .about_main_area {
     padding-top: 90px;
+
+	.dark_text p {
+		color: $primary;
+	}
 }
 
 .about_main_area .about_inner {
@@ -2713,6 +2717,65 @@ max-width: 630px;
   }
   
 // Services Single Page - END
+
+// Careers Page
+.services_area {
+	padding-bottom: 100px;
+  }
+  
+  .services_area .services_inner {
+	margin-bottom: -60px;
+  }
+  
+  .service_item {
+	  padding: 70px;
+	  opacity: 1;
+	  box-shadow: 0px 45px 150px 0px rgba(30, 34, 40, 0.1);
+	  transition: all 300ms ease 0s;
+	  background: #fff;
+	  margin-bottom: 60px;
+  }
+  
+  .service_item .service_icon {
+	font-size: 24px;
+	font-weight: 700;
+	color: #1e2228;
+	line-height: 38px;
+	align-items: center;
+	margin-bottom: 40px;
+  }
+  
+  .service_item .service_icon i {
+	font-size: 55px;
+	color: #2558b5;
+	margin-right: 55px;
+  }
+  
+  .service_item .theme_btn_two {
+	min-width: 220px;
+	margin-top: 44px;
+  }
+  
+  .service_item .theme_btn_two:after {
+	background: #2558b5;
+  }
+  
+  .service_item:hover {
+	background: #2558b5;
+  }
+  
+  .service_item:hover .service_icon i,
+  .service_item:hover .service_icon,
+  .service_item:hover p {
+	color: #fff;
+  }
+  
+  .service_item:hover {
+	  background: url('images/service-item-bg.jpg') no-repeat scroll center center;
+	  background-size: cover;
+	  transition: all 300ms ease 0s;
+  }
+// Careers Page - END
 
 // Responsive
 @media (max-width: 1700px) {
