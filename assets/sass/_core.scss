@@ -177,6 +177,10 @@ div.buttons {
 	padding-bottom: 100px;
 }
 
+.pl_100 {
+    padding-left: 100px;
+}
+
 .line {
     width: 100%;
     height: 1px;
@@ -2776,6 +2780,12 @@ max-width: 630px;
 	  transition: all 300ms ease 0s;
   }
 // Careers Page - END
+
+// Contact Page
+.cons_about_content .title_head {
+    margin-bottom: 45px;
+}
+// Contact Page - END
 
 // Responsive
 @media (max-width: 1700px) {

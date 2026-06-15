@@ -24,5 +24,7 @@ $repeatable_blocks = get_field('flexible_content');
   </main><!-- #main -->
 </div><!-- #primary -->
 
+<?php get_template_part('parts/clients'); ?>
+
 <?php
 get_footer();

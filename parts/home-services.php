@@ -1,6 +1,7 @@
 <?php
-    $services = get_field('services_info');
-    $services_url = get_field('services_see_all');
+    $home_id = 2;
+    $services = get_field('services_info', $home_id);
+    $services_url = get_field('services_see_all', $home_id);
     $services_url_text = (isset($services_url['title']) && $services_url['title']) ? $services_url['title'] : '';
     $services_url_link = (isset($services_url['url']) && $services_url['url']) ? $services_url['url'] : '';
     $services_url_target = (isset($services_url['target']) && $services_url['target']) ? $services_url['target'] : '_self';
