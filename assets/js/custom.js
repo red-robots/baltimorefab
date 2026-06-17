@@ -346,4 +346,30 @@ jQuery(document).ready(function ($) {
   }
 
   portfolioMasonry2(); // Projects - END
+  // Video Popup Home
+
+  function popupVideo() {
+    if ($(".popup-youtube").length) {
+      $(".popup-youtube").magnificPopup({
+        disableOn: 0,
+        type: "iframe",
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: true,
+        mainClass: "mfp-fade",
+        iframe: {
+          markup: '<div class="mfp-iframe-scaler">' + '<div class="mfp-close"></div>' + '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' + '</div>',
+          patterns: {
+            vimeo: {
+              index: 'vimeo.com/',
+              id: '/',
+              src: '//player.vimeo.com/video/%id%?autoplay=1&color=2558b5&title=0&byline=0&portrait=0'
+            }
+          }
+        }
+      });
+    }
+  }
+
+  popupVideo(); // Video Popup Home - END
 });

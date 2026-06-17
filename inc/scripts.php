@@ -73,6 +73,12 @@ function bellaworks_scripts() {
   );
 
   wp_enqueue_script(
+    'bellaworks-magnificPopup',
+    get_template_directory_uri() . '/assets/js/vendor/jquery.magnific-popup.min.js',
+    array(), '20260617', true
+  );
+
+  wp_enqueue_script(
     'bellaworks-custom',
     get_template_directory_uri() . '/assets/js/custom/custom.js',
     array(), '20260617', true

@@ -38,7 +38,7 @@
       <div class="imagecol cons_work_right">
         <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" />
         <?php if( $video_url['url'] ){
-          echo '<a href="'. $video_url['url'] .'" class="video_icon" target="'. $video_url['target'] .'"><span><i class="fas fa-play"></i></span></a>';
+          echo '<a href="'. $video_url['url'] .'" class="video_icon popup-youtube" target="'. $video_url['target'] .'"><span><i class="fas fa-play"></i></span></a>';
         } ?>
       </div>
     <?php } ?>
