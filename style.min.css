@@ -6961,9 +6961,9 @@ header+div,header+section{padding-top:145px}
 .cons_service_quality_item p{font-size:18px;line-height:34px;color:#7e8288;margin-bottom:0}
 .cons_service_area_six{padding:100px 0}
 .cons_service_area_six .col-md-6{margin-bottom:30px}
-.cons_service_area_six .cons_service_quality_item{margin-top:0;padding:68px 53px 65px;position:relative;overflow:hidden;-webkit-transition:all .2s linear;transition:all .2s linear;cursor:pointer}
-.cons_service_area_six .cons_service_quality_item .shap{position:absolute;right:-173px;top:-145px;font-size:280px;color:#f7f5f9;margin-bottom:0}
+.cons_service_area_six .cons_service_quality_item{margin-top:0;padding:68px 53px 65px;position:relative;overflow:hidden;-webkit-transition:all .2s linear;transition:all .2s linear;cursor:pointer;height:100%}
 .cons_service_area_six .cons_service_quality_item:hover{background:#fff;-webkit-box-shadow:0 45px 150px 0 rgba(30,34,40,.2);box-shadow:0 45px 150px 0 rgba(30,34,40,.2)}
+.cons_service_area_six .shap{position:absolute;right:-173px;top:-145px;font-size:280px;color:#f7f5f9;margin-bottom:0}
 .cons_service_area_six .full_btn{width:100%;height:100%;font-size:36px;font-weight:700}
 .cons_clients_logo_area{padding-top:150px}
 .clients_logo_inner{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
