@@ -53,14 +53,14 @@
             <div class="container">
               <div class="slider_text">
                 <?php if($global_text) { ?>
-                  <h2><?php echo anti_email_spam($global_content) ?></h2>
+                  <h2 data-animation="fadeInUp" data-delay="0.1s"><?php echo anti_email_spam($global_content) ?></h2>
                   <?php if($global_button && $global_button_text && $global_button_link) { ?>
-                    <a href="<?php echo $global_button_link; ?>" class="theme_btn theme_btn_3 hover_style_1" target="<?php echo $global_button_target; ?>"><?php echo $global_button_text; ?></a>
+                    <a href="<?php echo $global_button_link; ?>" class="theme_btn theme_btn_3 hover_style_1" target="<?php echo $global_button_target; ?>" data-animation="fadeInUp" data-delay="0.5s"><?php echo $global_button_text; ?></a>
                   <?php } ?>
                 <?php }else{ ?>
-                  <h2><?php echo anti_email_spam($caption) ?></h2>
+                  <h2 data-animation="fadeInUp" data-delay="0.1s"><?php echo anti_email_spam($caption) ?></h2>
                   <?php if($slide_button && $slide_button_text && $slide_button_link) { ?>
-                    <a href="<?php echo $slide_button_link; ?>" class="theme_btn theme_btn_3 hover_style_1" target="<?php echo $slide_button_target; ?>"><?php echo $slide_button_text; ?></a>
+                    <a href="<?php echo $slide_button_link; ?>" class="theme_btn theme_btn_3 hover_style_1" target="<?php echo $slide_button_target; ?>" data-animation="fadeInUp" data-delay="0.5s"><?php echo $slide_button_text; ?></a>
                   <?php } ?>
                 <?php } ?>
               </div>
