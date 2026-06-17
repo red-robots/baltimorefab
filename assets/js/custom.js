@@ -110,36 +110,33 @@ jQuery(document).ready(function ($) {
       gutter: 0 // Space between items
 
     });
-  });
-  var swiperElements = document.querySelectorAll('.swiper');
-
-  if (swiperElements.length) {
-    // Loop through each element found
-    swiperElements.forEach(function (el) {
-      new Swiper(el, {
-        speed: 400,
-        slidesPerView: 1,
-        effect: 'fade',
-        loop: true,
-        grabCursor: true,
-        allowTouchMove: true,
-        autoplay: {
-          delay: 5000,
-          // Time in ms between slides (3 seconds)
-          disableOnInteraction: false // Keeps sliding after user interacts
-
-        },
-        navigation: {
-          nextEl: el.querySelector('.swiper-button-next'),
-          prevEl: el.querySelector('.swiper-button-prev')
-        },
-        pagination: {
-          el: el.querySelector('.swiper-pagination'),
-          clickable: true
-        }
-      });
-    });
-  } //OPEN menu toggle
+  }); //   const swiperElements = document.querySelectorAll('.swiper');
+  //   if(swiperElements.length) {
+  //     // Loop through each element found
+  //     swiperElements.forEach((el) => {
+  //       new Swiper(el, {
+  //         speed: 400,
+  //         slidesPerView: 1,
+  //         effect: 'fade',
+  //         loop: true,
+  // 				grabCursor: true,
+  // 				allowTouchMove: true,
+  //         autoplay: {
+  //           delay: 5000, // Time in ms between slides (3 seconds)
+  //           disableOnInteraction: false, // Keeps sliding after user interacts
+  //         },
+  //         navigation: {
+  //           nextEl: el.querySelector('.swiper-button-next'),
+  //           prevEl: el.querySelector('.swiper-button-prev'),
+  //         },
+  //         pagination: {
+  //           el: el.querySelector('.swiper-pagination'),
+  //           clickable: true,
+  //         },
+  //       });
+  //     });
+  //   }
+  //OPEN menu toggle
   // $(document).on('click', '.menu-toggle', function(e){
   // 	e.preventDefault();
   // 	let isExpanded = $(this).attr('aria-expanded') === 'true';
@@ -172,7 +169,6 @@ jQuery(document).ready(function ($) {
    *  Date Modified: 06.02.2026
    */
   // Preloader - WOW js
-
 
   Pace.on("done", function () {
     $("#preloader").addClass("load_coplate");
@@ -247,12 +243,12 @@ jQuery(document).ready(function ($) {
     $imageSlider.slick({
       autoplay: true,
       autoplaySpeed: sliderTimer,
-      speed: 5000,
+      speed: 800,
       dots: false,
       fade: true,
       prevArrow: ".slider_left_arrow",
       nextArrow: ".slider_right_arrow",
-      adaptiveHeight: true,
+      adaptiveHeight: false,
       pauseOnFocus: false,
       pauseOnHover: false
     });
