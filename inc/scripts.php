@@ -75,7 +75,7 @@ function bellaworks_scripts() {
   wp_enqueue_script(
     'bellaworks-custom',
     get_template_directory_uri() . '/assets/js/custom/custom.js',
-    array(), '20260218', true
+    array(), '20260617', true
   );
 
 	wp_localize_script( 'bellaworks-custom', 'frontajax', array(
