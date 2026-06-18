@@ -7,10 +7,6 @@ get_header();
 $repeatable_blocks = get_field('flexible_content');
 ?>
 
-<?php if ($repeatable_blocks) { ?>
-  <?php include( locate_template('repeatable-blocks.php') ); ?>
-<?php } ?>
-
 <section class="about_main_area">
   <?php while ( have_posts() ) : the_post(); ?>
     
@@ -29,6 +25,10 @@ $repeatable_blocks = get_field('flexible_content');
 
   <?php endwhile; ?>  
 </section>
+
+<?php if ($repeatable_blocks) { ?>
+  <?php include( locate_template('repeatable-blocks.php') ); ?>
+<?php } ?>
 
 <?php get_template_part('parts/home-services'); ?>
 
