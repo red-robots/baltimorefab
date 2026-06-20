@@ -24,20 +24,22 @@ $flexible_content_internal = get_field('flexible_content_internal');
 <?php } else { ?>
 <div id="primary" class="content-area-full generic-layout">
 	<main id="main" class="site-main" role="main">
+    <div class="container">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+      <?php while ( have_posts() ) : the_post(); ?>
 
-      <?php if ($repeatable_blocks) { ?>
-        <?php include( locate_template('repeatable-blocks.php') ); ?>
-      <?php } else { ?>
-        <h1 class="page-title"><span><?php the_title(); ?></span></h1>
-        <div class="entry-content">
-          <?php the_content(); ?>
-        </div>
-      <?php } ?>
+        <?php if ($repeatable_blocks) { ?>
+          <?php include( locate_template('repeatable-blocks.php') ); ?>
+        <?php } else { ?>
+          <h1 class="page-title"><span><?php the_title(); ?></span></h1>
+          <div class="entry-content">
+            <?php the_content(); ?>
+          </div>
+        <?php } ?>
 
-		<?php endwhile; ?>
+      <?php endwhile; ?>
 
+    </div>
 	</main><!-- #main -->
 </div><!-- #primary -->
 <?php } ?>
